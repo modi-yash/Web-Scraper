@@ -17,7 +17,7 @@ class Article:
 
 url = "https://pixelford.com/blog/"
 try:
-    response = requests.get(url, headers = {'user-agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'})
+    response = requests.get(url, headers={'user-agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'})
     html = response.content
     soup = BeautifulSoup(html, 'html.parser')
     articles_soup = soup.find_all('article', class_='type-post')
